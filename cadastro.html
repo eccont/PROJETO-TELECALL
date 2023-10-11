@@ -1,0 +1,205 @@
+
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
+
+    
+    <link rel="stylesheet" href="CSS/style.css">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap" rel="stylesheet">
+    
+    <link rel="icon" type="image/x-icon" href="ASSETS/favicon.png">
+
+
+    <title>Telecall | Soluções em tecnologia</title>
+  </head>
+<body>
+  <div class="bg-cadastro">
+    <div class="container">
+      <div class="box-cadastro">
+        <div class="row">
+          <div class="login">
+            <div>
+              <img class="logo-login" src="ASSETS/logo-branca.png" alt="Logo da telecall">
+            </div>
+            <h2>Que bom ter você de volta!</h2>
+            <div class="acessar-conta">
+              <h4>Já tem uma conta?</h4>
+              <a class="button-white" href="login.html">Acessar</a>
+            </div>
+          </div>
+          <div class="cadastro">
+            <div>
+              <h2>CADASTRE-SE</h2>
+            </div>
+              <form class="formulario" action="#">
+                <div class="campo-nome d-flex">
+                  <div class="me-3">
+                    <p>Nome*</p>
+                    <label for="nome">
+                      <input id="nome" class="form-item" type="text" placeholder="Seu nome" size="40" required>
+                    </label>
+                  </div>
+                  <div>
+                    <p>Data de Nascimento</p>
+                    <label for="data">
+                      <input id="data"  class="form-item" type="date" size="40">
+                    </label>
+                  </div>
+                </div>
+                
+                <div class="e-mail d-flex">
+                  <div>
+                    <p>Seu melhor e-mail*</p>
+                    <label for="e-mail">
+                      <input id="e-mail" class="form-item me-3" type="email" placeholder="Seu e-mail" size="40" required>
+                    </label>
+                  </div>
+                  <div>
+                    <p>CPF</p>
+                    <label for="cpf">
+                      <input id="cpf" class="form-item" type="text" placeholder="Seu CPF" size="40">
+                    </label>
+                  </div>
+                </div>
+                
+                <div id="sexo">
+                  <p>Sexo</p>
+                  <div class="d-flex align-items-center mb-3">
+                    <div class="label-radio">
+                      <input id="masculino" class="option-radio" type="radio" name="sexo" value="Masculino"/>
+                      <label for="masculino">
+                        <div class="radio-btn"></div>                 
+                      </label>
+                      <span>Masculino</span>
+                    </div>
+
+                    <div class="label-radio">
+                      <input id="feminino" class="option-radio" type="radio" name="sexo" value="Feminino"/>
+                      <label for="feminino">
+                        <div class="radio-btn"></div>
+                      </label>
+                      <span>Feminino</span>
+                    </div>
+
+                    <div class="label-radio">
+                      <input id="nao-diz" class="option-radio" type="radio" name="sexo" value="nao-disse"/>
+                      <label for="nao-diz">
+                        <div class="radio-btn"></div>
+                      </label>
+                      <span>Prefiro não dizer</span>
+                    </div>
+                  </div>
+                </div>
+                <div>
+                  <p>Nome Materno</p>
+                  <label>
+                    <input  class="form-item" type="text" placeholder="Nome materno" size="40">
+                  </label>
+                </div>
+                <div class="telefones d-flex">
+                  <div>
+                    <p>Telefone Celular</p>
+                    <label class="form-item">
+                      <input  class="form-item me-3" type="text" placeholder="Telefone celular" size="40">
+                    </label>
+                  </div>
+                  <div >
+                    <p>Telefone Fixo</p>
+                    <label for="tel-fixo">
+                      <input id="tel-fixo" class="form-item" type="text" placeholder="Telefone fixo" size="40">
+                    </label>
+                  </div>
+                </div>
+
+                <div class="enderecos form-item">
+                  <p>Endereço</p>
+                  <input class="form-item me-3" type="text" placeholder="Logradouro" size="40">
+                  <input class="form-item" type="text" placeholder="Número" size="40">
+                  <input class="form-item me-3" type="text" placeholder="Bairro" size="40">
+                  <input class="form-item" type="text" placeholder="Cidade" size="40">
+                  <input class="form-item" type="text" placeholder="Estado" size="40">
+                </div>
+                
+                <div>
+                  <p>Login*</p>
+                  <label>
+                    <input  class="form-item" type="text" placeholder="Login" size="40" required>
+                  </label>
+                </div>
+
+                <div class=" d-flex senhas">
+                  <div class="me-3">
+                    <p>Senha*</p>
+                    <label class="senha form-item" for="senha">
+                      <input id="senha" class="form-item" type="text" placeholder="Sua senha" size="40" required>
+                    </label>
+                  </div>
+                  
+                  <div>
+                    <p>Repita a senha*</p>
+                    <label for="repete-senha">
+                      <input id="repete-senha" class="form-item" type="text" placeholder="Repita a senha" size="40" required>
+                    </label>
+                  </div>
+              </div>
+
+              <div>
+                <button type="submit">Finalizar cadastro</button>
+              </div>
+
+              </form>
+            
+          </div>
+        </div>
+      </div>
+    </div>
+  
+  </div>
+  
+  
+
+
+
+
+
+  <!-- ============= FOOTER ============ -->
+  <footer id="footer">
+    <div class="container">
+      <div class="row footer-content1">
+        <div class="col-12 footer-content1">
+            <a href="index.html"><img class="logo-footer" src="ASSETS/logo-branca.png" alt=""></a>
+            <p>Todos os direitos reservados.</p>
+            <ul>
+              <li>
+                <a href="https://api.whatsapp.com/send?phone=552130301010&text=%23Comercial" target="_blank"><i class="fa-brands fa-square-whatsapp"></i></a>
+              </li>
+              <li>
+                <a href="https://www.facebook.com/TelecallBr" target="_blank"><i class="fa-brands fa-square-facebook"></i></a>
+              </li>
+              <li>
+                <a href="https://www.instagram.com/telecallbr/" target="_blank"><i class="fa-brands fa-square-instagram"></i></a>
+              </li>
+              <li>
+                <a href="https://www.linkedin.com/company/telecall/" target="_blank"> <i class="fa-brands fa-linkedin"></i></a>
+              </li>
+            </ul>
+        </div>
+      </div>
+    </div>
+  </footer>
+  <!-- ============= FIM DO FOOTER ============ -->
+</body>
+</html>
