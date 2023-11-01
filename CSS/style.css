@@ -619,19 +619,42 @@ input[type="radio"]:checked + label .radio-btn{
   align-items: center;
  }
 
+ .form-item {
+  width: 100%;
+ }
+
  input.form-item{
   background-color: #ffffff ;
   padding: 5px;
   margin: 0px 0px 15px 0px;
-  border-radius: 5px;  
+  border-radius: 5px;
  }
 
- .telefone {
+ .telefones {
   display: flex;
   flex-direction: row;
-  flex-wrap: wrap;
+  flex-wrap: nowrap;
+  gap: 15px;
  }
 
+ .telefones span  {
+  width: 100%;
+ }
+
+ select {
+  padding: 5px;
+  border-radius: 5px;
+  margin-bottom: 15px;
+ }
+
+ *:disabled {
+  background-color: #8e8e8e;
+  opacity: 0.5;
+ }
+ 
+ #messageCep, #messageNome {
+  color: var(--red);
+}
  /* =============== TELA DE LOGIN =================*/
 
  .tela-login {
@@ -756,6 +779,19 @@ form button {
   padding: 8px 16px;
   background-color: var(--blue);
   border-radius: 5px;
+}
+
+form.formulario-login button {
+  margin-top: 10px;
+  color: var(--blue);
+  padding: 8px 16px;
+  background-color: var(--gray);
+  border-radius: 5px;
+}
+
+form.formulario-login button:hover {
+  background-color: #cecece;
+  transition: 200ms;
 }
 
 button:hover {
