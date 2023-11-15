@@ -25,6 +25,7 @@
   --p-gray: #2a2a2a;
   --p-light-gray: #ebebeb;
   --mid-gray: #cfcfcf;
+  --gray: #6d6d6d;
 
   --margin: 30px;
 
@@ -32,8 +33,8 @@
 }
 
 .dark-mode {
-  --bg-color: #2d2d2d;
-  --bg-color-contrast: #3f3f3f;
+  --bg-color: #021521;
+  --bg-color-contrast: #002438;
 
   --blue: #65bcf6;
 
@@ -43,6 +44,14 @@
   --p-gray: #d8d8d8;
   --p-light-gray: #eeeeee;
   --mid-gray: #cfcfcf;
+  
+  --gradient-blue:linear-gradient(0deg, #021521, #063555 100%);
+}
+
+
+
+.dark-mode h4 {
+  color: white;
 }
 
 @media (max-width: 600px) or (max-width: 800px) or (max-width: 990px){
@@ -98,6 +107,7 @@ body {
 p {
   color: var(--p-gray);
   font-size: 1.2em;
+  margin-bottom: 0px;
 }
 
 .fixed {
@@ -176,8 +186,6 @@ margin: 5px;
 
   margin: 5px;
 }
-
-
 
 .uteis {
   display: flex;
@@ -490,9 +498,7 @@ h4 {
  #footer{
   background-color: var(--dark-blue);
   padding-top: 15px;
-  
-  
- }
+  }
 
  #footer .row{
   display: flex;
@@ -622,7 +628,7 @@ h4 {
   padding: 100px 40px 100px 40px;
   border-bottom-left-radius: 20px;
   border-top-left-radius: 20px;
-  background-image: linear-gradient(to top, #02426c, #00436f, #004d7f, #00568f, #0060a0);
+  background-image: var(--gradient-blue);
  }
 
 
@@ -630,7 +636,7 @@ h4 {
   flex: 2;
   display: flex;
   flex-direction: column;
-  background-color: #e1e1e1;
+  background-color: var(--bg-color);
   border-bottom-right-radius: 20px;
   border-top-right-radius: 20px;
   padding: 30px;
@@ -664,7 +670,6 @@ h4 {
  }
 
  .formulario label > p{
- 
   padding: 0px;
  }
 
@@ -704,11 +709,21 @@ input[type="radio"]:checked + label .radio-btn{
   width: 100%;
  }
 
- input.form-item{
-  background-color: #ffffff ;
+ input.form-item, select.form-item{
+  background-color: var(--bg-color-contrast) ;
+  color: #3a4f5c;
   padding: 5px;
   border-radius: 5px;
  }
+
+ input::placeholder {
+  color: #b7b7b7;
+}
+
+.dark-mode input::placeholder {
+  color: #3a4f5c;
+}
+
 
  .enderecos input {
   margin: 5px 0px;
@@ -731,12 +746,16 @@ input[type="radio"]:checked + label .radio-btn{
   margin-bottom: 15px;
  }
 
+ * {
+  border: 1px solid red !important;
+ }
+
  *:disabled {
   background-color: var(--mid-gray);
   opacity: 0.5;
  }
  
- #messageCep, #messageNome, #messageCPF, #messageDataNascimento, #messageSexo, #messageNomeMae, #messageTelefoneFixo, #messageTelefoneCelular {
+ #messageCep, #messageNome, #messageCPF, #messageDataNascimento, #messageSexo, #messageNomeMae, #messageTelefoneFixo, #messageTelefoneCelular, #messageLogin, #messageSenha, #messageRepeteSenha, #messageSubmit {
   color: var(--red);
   font-size: 1rem;
   visibility: hidden;

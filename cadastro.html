@@ -22,6 +22,7 @@
     />
 
     <link rel="stylesheet" href="CSS/style.css" />
+    <link rel="stylesheet" href="CSS/DM.css" />
 
     <link
       rel="stylesheet"
@@ -44,6 +45,30 @@
     <title>Telecall | Soluções em tecnologia</title>
   </head>
   <body class="">
+        <!-- ============= FIXED MENU ================= -->
+        <div class=" fixed">
+          <details> 
+            <summary>
+              <i class="fa-solid fa-universal-access"></i>
+              <p>Acessibilidade</p>
+            </summary> 
+            <div>
+              <p>Modo escuro</p>
+              <input type="checkbox" class="checkbox" id="chk">
+              <label class="label" for="chk">
+                <i class="fas fa-moon"></i>
+                <i class="fas fa-sun"></i>
+                <div class="ball"></div>
+              </label>
+            </div> 
+          </details>
+          <a href="#">
+            <div class="voltar-ao-inicio">
+              <i class="fa-solid fa-arrow-up"></i>
+            </div>
+          </a>
+      </div>
+      <!-- ============= FIM FIXED MENU ================= -->
     <div class="bg-cadastro">
       <div class="container">
         <div class="box-cadastro">
@@ -66,7 +91,7 @@
               <div class="mb-4">
                 <h2>CADASTRE-SE</h2>
               </div>
-              <form class="formulario" action="#">
+              <form class="formulario" action="/index.html">
                 <div class="campo-nome d-flex label-form">
                   <div class="form-item ">
                     <p>Nome*</p>
@@ -294,6 +319,7 @@
                   <p>Login*</p>
                   <label class="form-item">
                     <input
+                      id="login"
                       class="form-item"
                       type="text"
                       placeholder="Login"
@@ -314,6 +340,7 @@
                         placeholder="Sua senha"
                         required
                       />
+                      <p id="messageSenha"></p>
                     </label>
                   </div>
 
@@ -327,12 +354,14 @@
                         placeholder="Sua senha"
                         required
                       />
+                      <p id="messageRepeteSenha"></p>
                     </label>
                   </div>
                 </div>
 
                 <div class="label-form">
-                  <button type="submit">Finalizar cadastro</button>
+                  <button id="submit-form" type="submit">Finalizar cadastro</button>
+                  <p id="messageSubmit"></p>
                 </div>
               </form>
             </div>
@@ -385,5 +414,6 @@
     <!--<script src="JS/valida-nome.js"></script>-->
     <script src="JS/valida-cep.js"></script>
     <script src="JS/require-form.js"></script>
+    <script src="JS/dark_mode.js"></script>
   </body>
 </html>
