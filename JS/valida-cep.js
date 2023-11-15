@@ -5,11 +5,11 @@ const localidade = document.querySelector('#localidade');
 const messageCep = document.querySelector('#messageCep');
 
 cep.addEventListener('focusout', async () => {
-
   try {
     const onlyNumbers  = /^[0-9]+$/;
     const cepValid  = /^[0-9]{8}$/;
       if(!onlyNumbers.test(cep.value) || !cepValid.test(cep.value)) {
+        document.getElementById("messageCep").setAttribute("style", "visibility: visible");
         throw {cep_error: 'CEP inválido'};
       }
 
@@ -26,18 +26,14 @@ cep.addEventListener('focusout', async () => {
     localidade.value = responseCep.localidade;
 
     if (!response.error) {
-      bairro.setAttribute("disabled", "disabled");
+      //bairro.setAttribute("disabled", "disabled");
+      document.getElementById("messageCep").setAttribute("style", "visibility: visible");
       localidade.setAttribute("disabled", "disabled");
       uf.setAttribute("disabled", "disabled");
     }
-
-
   } catch (error) {
     if(error?.cep_error){
       messageCep.textContent = error.cep_error;
-      setTimeout(() => {
-        messageCep.textContent='' ;
-      }, 5000)
     }
       console.log(error)
     }

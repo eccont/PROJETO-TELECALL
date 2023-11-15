@@ -18,20 +18,6 @@
   --gradient-blue: linear-gradient(90deg, rgba(0,77,127,1), rgba(12,111,175,1) 100%);
 }
 
-#darkmode {
-  background-color: rgb(15, 150, 174);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-
-  height: 100vh;
-  transition: background 200ms linear;
-}
-
-#darkmode.dark {
-  background: #292c35;
-}
-
 .checkbox {
   opacity: 0;
   position: absolute;
@@ -50,6 +36,8 @@
   height: 26px;
   width: 50px;
   transform: scale(1.5);
+
+  margin: 20px;
 }
 
 .label .ball {

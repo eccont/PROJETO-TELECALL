@@ -1,6 +1,6 @@
 const messageNome = document.querySelector('#messageNome');
 
-nome.addEventListener('focusout', () => {
+nome.addEventListener('keyup', () => {
   const nomeValor = document.querySelector('#nome').value;
   try { 
     if (nomeValor.length < 15){

@@ -43,7 +43,7 @@
 
     <title>Telecall | Soluções em tecnologia</title>
   </head>
-  <body>
+  <body class="">
     <div class="bg-cadastro">
       <div class="container">
         <div class="box-cadastro">
@@ -67,10 +67,10 @@
                 <h2>CADASTRE-SE</h2>
               </div>
               <form class="formulario" action="#">
-                <div class="campo-nome d-flex">
-                  <div class="me-3 form-item">
+                <div class="campo-nome d-flex label-form">
+                  <div class="form-item ">
                     <p>Nome*</p>
-                    <span id="messageNome"></span>
+
                     <label for="nome" class="form-item">
                       <input
                         id="nome"
@@ -79,32 +79,16 @@
                         placeholder="Seu nome"
                         required
                       />
-                    </label>
-                  </div>
-                  <div class="form-item">
-                    <p>Data de Nascimento</p>
-                    <label for="data" class="form-item">
-                      <input
-                        id="data"
-                        class="form-item"
-                        type="date"
-                        required
-                      />
+                      <p id="messageNome">&nbsp</p>
                     </label>
                   </div>
                 </div>
-
-                <div class="e-mail d-flex">
+                <div class="d-flex label-form">
                   <div class="me-3 form-item">
-                    <p>Seu melhor e-mail*</p>
-                    <label for="e-mail" class="form-item">
-                      <input
-                        id="e-mail"
-                        class="form-item me-3"
-                        type="email"
-                        placeholder="Seu e-mail"
-                        required
-                      />
+                    <p>Data de Nascimento</p>
+                    <label for="data" class="form-item">
+                      <input id="data" class="form-item" type="date" required />
+                      <p id="messageDataNascimento">&nbsp</p>
                     </label>
                   </div>
                   <div class="form-item">
@@ -114,16 +98,17 @@
                         id="cpf"
                         class="form-item"
                         type="text"
-                        placeholder="Seu CPF"
+                        placeholder="000.000.000-00"
                         required
                       />
+                      <p id="messageCPF">&nbsp</p>
                     </label>
                   </div>
                 </div>
 
-                <div id="sexo">
+                <div id="sexo" class="label-form">
                   <p>Sexo</p>
-                  <div class="d-flex align-items-center mb-3">
+                  <div class="d-flex align-items-center">
                     <div class="label-radio">
                       <input
                         id="masculino"
@@ -160,6 +145,7 @@
                         type="radio"
                         name="sexo"
                         value="nao-disse"
+                        required
                       />
                       <label for="nao-diz">
                         <div class="radio-btn"></div>
@@ -167,30 +153,35 @@
                       <span>Prefiro não dizer</span>
                     </div>
                   </div>
+                  <p id="messageSexo">&nbsp</p>
                 </div>
-                <div>
+                <div class="label-form">
                   <p>Nome Materno</p>
                   <label class="form-item">
                     <input
+                      id="nomeMae"
                       class="form-item"
                       type="text"
                       placeholder="Nome materno"
                       required
                     />
                   </label>
+                  <p id="messageNomeMae">&nbsp</p>
                 </div>
-                <div class="telefones">
+                <div class="telefones label-form">
                   <span>
                     <p>Telefone Celular</p>
                     <label for="tel-cel" class="form-item">
                       <input
                         id="tel-cel"
                         class="form-item"
-                        type="text"
+                        type="tel"
                         placeholder="Telefone celular"
+                        onkeyup="handlePhone(event)"
                         required
                       />
                     </label>
+                    <p id="messageTelefoneCelular">&nbsp</p>
                   </span>
                   <span>
                     <p>Telefone Fixo</p>
@@ -198,17 +189,19 @@
                       <input
                         id="tel-fixo"
                         class="form-item"
-                        type="text"
+                        type="tel"
                         placeholder="Telefone fixo"
+                        onkeyup="handlePhone(event)"
                         required
                       />
+                      <p id="messageTelefoneFixo">&nbsp</p>
                     </label>
                   </span>
                 </div>
 
-                <div id="enderecos" class="enderecos form-item">
+                <div id="enderecos" class="enderecos form-item label-form">
                   <p>Endereço</p>
-                  <span id="messageCep"></span>
+                  <p id="messageCep"></p>
                   <input
                     id="cep"
                     class="form-item me-3"
@@ -256,7 +249,7 @@
                     alt="Digite sua cidade"
                     required
                   />
-                  <input
+                  <select
                     id="uf"
                     class="form-item"
                     type="text"
@@ -264,10 +257,40 @@
                     placeholder="Estado"
                     alt="Digite seu Estado"
                     required
-                  />
+                  >
+                  <option value="AC">Acre</option>
+                  <option value="AL">Alagoas</option>
+                  <option value="AP">Amapá</option>
+                  <option value="AM">Amazonas</option>
+                  <option value="BA">Bahia</option>
+                  <option value="CE">Ceará</option>
+                  <option value="DF">Distrito Federal</option>
+                  <option value="ES">Espírito Santo</option>
+                  <option value="GO">Goiás</option>
+                  <option value="MA">Maranhão</option>
+                  <option value="MT">Mato Grosso</option>
+                  <option value="MS">Mato Grosso do Sul</option>
+                  <option value="MG">Minas Gerais</option>
+                  <option value="PA">Pará</option>
+                  <option value="PB">Paraíba</option>
+                  <option value="PR">Paraná</option>
+                  <option value="PE">Pernambuco</option>
+                  <option value="PI">Piauí</option>
+                  <option value="RJ">Rio de Janeiro</option>
+                  <option value="RN">Rio Grande do Norte</option>
+                  <option value="RS">Rio Grande do Sul</option>
+                  <option value="RO">Rondônia</option>
+                  <option value="RR">Roraima</option>
+                  <option value="SC">Santa Catarina</option>
+                  <option value="SP">São Paulo</option>
+                  <option value="SE">Sergipe</option>
+                  <option value="TO">Tocantins</option>
+                  <option value="EX">Estrangeiro</option>
+                  </select>
+                  <span id="messageCep">$nbsp</span>
                 </div>
 
-                <div>
+                <div class="label-form">
                   <p>Login*</p>
                   <label class="form-item">
                     <input
@@ -276,10 +299,11 @@
                       placeholder="Login"
                       required
                     />
+                    <p id="messageLogin"></p>
                   </label>
                 </div>
 
-                <div class="d-flex senhas">
+                <div class="d-flex senhas label-form">
                   <div class="me-3 form-item">
                     <p>Senha*</p>
                     <label class="senha form-item" for="senha">
@@ -307,7 +331,7 @@
                   </div>
                 </div>
 
-                <div>
+                <div class="label-form">
                   <button type="submit">Finalizar cadastro</button>
                 </div>
               </form>
@@ -358,7 +382,8 @@
       </div>
     </footer>
     <!-- ============= FIM DO FOOTER ============ -->
-    <script src="JS/valida-nome.js"></script>
+    <!--<script src="JS/valida-nome.js"></script>-->
     <script src="JS/valida-cep.js"></script>
+    <script src="JS/require-form.js"></script>
   </body>
 </html>
