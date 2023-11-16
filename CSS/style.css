@@ -272,7 +272,7 @@ nav{
 
 .bg-servicos::before {
   content: '';
-  background-image: url("../assets/img-solucoes.jpg");
+  background-image: url("../ASSETS/img-solucoes.jpg");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
@@ -607,7 +607,7 @@ h4 {
 
 .bg-cadastro::before {
   content: '';
-  background-image: url("../assets/img-solucoes.jpg");
+  background-image: url("../ASSETS/img-solucoes.jpg");
   background-repeat:repeat;
   background-size:cover;
   background-position: center;
