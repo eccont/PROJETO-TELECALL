@@ -45,31 +45,30 @@
     <title>Telecall | Soluções em tecnologia</title>
   </head>
   <body class="">
-
     <!-- ============= FIXED MENU ================= -->
-    <div class=" fixed">
-      <details> 
+    <div class="fixed">
+      <details>
         <summary>
           <i class="fa-solid fa-universal-access"></i>
           <p>Acessibilidade</p>
-        </summary> 
+        </summary>
         <div>
           <p>Modo escuro</p>
-          <input type="checkbox" class="checkbox" id="chk">
+          <input type="checkbox" class="checkbox" id="chk" />
           <label class="label" for="chk">
             <i class="fas fa-moon"></i>
             <i class="fas fa-sun"></i>
             <div class="ball"></div>
           </label>
-        </div> 
+        </div>
       </details>
       <a href="#">
         <div class="voltar-ao-inicio">
           <i class="fa-solid fa-arrow-up"></i>
         </div>
       </a>
-  </div>
-  <!-- ============= FIM FIXED MENU ================= -->
+    </div>
+    <!-- ============= FIM FIXED MENU ================= -->
     <!-- ============= INFO BAR ============ -->
     <div class="uteis p-2">
       <ul class="nav justify-content-end">
@@ -104,12 +103,23 @@
           >
         </li>
       </ul>
-
       <ul class="nav pe-3">
         <li>
-          <a href="login.html" class="button-outline">
-            <i class="fas fa-user me-2"></i>Área do cliente
-          </a>
+          <div class="dropdown">
+            <button
+              href="login.html"
+              type="button"
+              class="dropdown-toggle button-outline"
+              data-bs-toggle="dropdown"
+              aria-expanded="false"
+            >
+              <i class="fas fa-user me-2"></i>
+              <p id="logged">Área do cliente</p>
+            </button>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" href="/login.html"><p id="listDropdown">Login</p></a></li>
+            </ul>
+          </div>
         </li>
       </ul>
     </div>
@@ -500,5 +510,6 @@
     </footer>
     <!-- ============= FIM DO FOOTER ============ -->
     <script src="JS/dark_mode.js"></script>
+    <script src="JS/userLogado.js"></script>
   </body>
 </html>

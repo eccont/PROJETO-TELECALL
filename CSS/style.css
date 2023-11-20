@@ -21,7 +21,7 @@
   --red: #b50a1b;
   --dark-red: #890916;
   --light-red: #ffa5ae;
-  
+
   --p-gray: #2a2a2a;
   --p-light-gray: #ebebeb;
   --mid-gray: #cfcfcf;
@@ -29,7 +29,11 @@
 
   --margin: 30px;
 
-  --gradient-blue: linear-gradient(90deg, rgba(0,77,127,1), rgba(12,111,175,1) 100%);
+  --gradient-blue: linear-gradient(
+    90deg,
+    rgba(0, 77, 127, 1),
+    rgba(12, 111, 175, 1) 100%
+  );
 }
 
 .dark-mode {
@@ -40,21 +44,40 @@
 
   --red: #ed192f;
   --dark-red: #8f0a18;
-  
+
   --p-gray: #d8d8d8;
   --p-light-gray: #eeeeee;
   --mid-gray: #cfcfcf;
-  
-  --gradient-blue:linear-gradient(0deg, #021521, #063555 100%);
+
+  --gradient-blue: linear-gradient(0deg, #021521, #063555 100%);
 }
 
+.dark-mode .dropdown button:hover {
+  background-color: #02426c;
+}
 
+.dark-mode #listDropdown {
+  color: #2a2a2a;
+}
 
 .dark-mode h4 {
+  color: white !important;
+}
+
+.dark-mode .dropdown button {
+  color: white !important;
+  border: 1px solid white;
+}
+
+.dark-mode #logged {
   color: white;
 }
 
-@media (max-width: 600px) or (max-width: 800px) or (max-width: 990px){
+.dark-mode input.form-item {
+  color: white;
+}
+
+@media (max-width: 600px) or (max-width: 800px) or (max-width: 990px) {
   main {
     top: inherit;
   }
@@ -63,7 +86,7 @@
     opacity: 100%;
   }
 
-  #planos .row{
+  #planos .row {
     display: flex;
     flex-direction: column;
     flex-wrap: nowrap;
@@ -74,7 +97,7 @@
     margin: auto;
   }
 
-  #planos h2{
+  #planos h2 {
     text-align: center;
   }
 
@@ -86,7 +109,6 @@
     justify-content: center;
     flex-direction: column-reverse;
     padding-bottom: 0px !important;
-    
   }
 
   #beneficios .img {
@@ -102,6 +124,7 @@ body {
   padding: 0px;
   background-color: var(--bg-color);
   font-family: "lato", sans-serif;
+  transition: 300ms;
 }
 
 p {
@@ -150,33 +173,35 @@ details summary {
   align-items: center;
 }
 
-details p, details i  {
+details p,
+details i {
   color: var(--p-light-gray);
   margin: 5px;
 }
 
-.voltar-ao-inicio{
+.voltar-ao-inicio {
   color: white;
 
   padding: 20px 25px;
-  
+
   background-color: var(--red);
   opacity: 70%;
   border-radius: 150px;
-  z-index: 2;  
+  z-index: 2;
 }
 
-.voltar-ao-inicio:hover{
+.voltar-ao-inicio:hover {
   opacity: 100%;
   transition: 300ms;
 }
 
 .fa-universal-access {
-font-size: 4rem;
-margin: 5px;
+  font-size: 4rem;
+  margin: 5px;
 }
 
-.option-acessibilidade,.option-acessibilidade p  {
+.option-acessibilidade,
+.option-acessibilidade p {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -192,7 +217,7 @@ margin: 5px;
   justify-content: space-between;
   align-items: center;
   flex-wrap: wrap;
-  font-size: .8em;
+  font-size: 0.8em;
   padding: 0px;
   background-color: var(--bg-color-contrast);
 }
@@ -201,11 +226,11 @@ margin: 5px;
   color: var(--p-gray);
 }
 
-.pe-3{
+.pe-3 {
   align-items: center;
 }
 
-nav{
+nav {
   position: absolute;
   z-index: 1;
 }
@@ -225,7 +250,6 @@ nav{
   margin-top: -33px;
   border-top-right-radius: 20px;
   border-bottom-left-radius: 20px;
-
 }
 
 .nav-link {
@@ -233,7 +257,7 @@ nav{
   display: inline;
 }
 
-.nav-item .fa-whatsapp{
+.nav-item .fa-whatsapp {
   padding-right: 5px;
 }
 
@@ -247,11 +271,20 @@ nav{
 }
 
 .nav-link:hover {
+  color: var(--dark-red);
+}
+
+header .nav-link:hover {
   color: var(--p-light-gray);
 }
 
-.active{
+
+.active {
   color: var(--light-red) !important;
+}
+
+.active:hover {
+  background-color: transparent;
 }
 
 .btn {
@@ -261,7 +294,7 @@ nav{
 }
 
 .btn:hover {
-  background-color: var(--blue);
+  background-color: var(--blue) !important;
 }
 
 .bg-servicos {
@@ -271,7 +304,7 @@ nav{
 }
 
 .bg-servicos::before {
-  content: '';
+  content: "";
   background-image: url("../assets/img-solucoes.jpg");
   background-repeat: no-repeat;
   background-size: cover;
@@ -330,9 +363,10 @@ h4 {
   padding: 5px 15px;
   color: var(--blue) !important;
   text-decoration: none;
+  background-color: transparent;
 }
 
-.button-outline:hover{
+.button-outline:hover {
   background-color: var(--blue);
   color: var(--p-light-gray) !important;
   transition: 200ms;
@@ -361,7 +395,7 @@ h4 {
   font-weight: 600;
 }
 
-.button-secondary:hover{
+.button-secondary:hover {
   background-color: var(--dark-red);
   transition: 200ms;
 }
@@ -371,7 +405,8 @@ h4 {
   color: var(--dark-red);
 }
 
-.service-box, .service-box p {
+.service-box,
+.service-box p {
   color: var(--p-light-gray);
   padding: 0px 10px;
   text-align: center;
@@ -382,7 +417,7 @@ h4 {
   margin: 10px 0 10px 0;
 }
 
-#servicos  h2 {
+#servicos h2 {
   text-align: center;
   color: var(--p-light-gray);
   font-weight: 600;
@@ -395,7 +430,7 @@ h4 {
   text-decoration: none;
 }
 
-.service-icon:hover{
+.service-icon:hover {
   color: #dadada;
   transition: 100ms;
   font-size: 320%;
@@ -409,7 +444,7 @@ h4 {
   min-height: 40vh;
 }
 
-.img{
+.img {
   width: 100%;
 }
 
@@ -425,10 +460,9 @@ h4 {
   gap: 15px;
   text-align: center;
   font-weight: 600;
-  
 }
 
-.logo-clientes{
+.logo-clientes {
   filter: grayscale(100%);
   filter: gray;
   margin: 15px;
@@ -437,14 +471,14 @@ h4 {
   mix-blend-mode: multiply;
 }
 
-.logo-clientes:hover{
+.logo-clientes:hover {
   filter: grayscale(0%);
   mix-blend-mode: normal;
   transition: all 0.2s ease-in-out;
   opacity: 1;
 }
 
-.bg-white{
+.bg-white {
   background-color: var(--bg-color-contrast) !important;
   min-height: 300px;
 }
@@ -487,81 +521,87 @@ h4 {
   font-size: 1.5em;
   color: var(--red);
   text-align: center;
- }
+}
 
- .op-beneficios{
+.op-beneficios {
   display: flex;
   flex-direction: row;
   flex-wrap: nowrap;
- }
+}
 
- #footer{
+#footer {
   background-color: var(--dark-blue);
   padding-top: 15px;
-  }
+}
 
- #footer .row{
+#footer .row {
   display: flex;
   flex-direction: row;
   flex-wrap: nowrap;
   align-items: center;
- }
+}
 
- #footer .col-4{
+#footer .col-4 {
   margin: 10px;
   padding: 15px;
- }
+}
 
- #footer h4{
+#footer h4 {
   text-align: left;
   font-size: 1em;
- }
+}
 
- #footer p{
+#footer p {
   margin: 0px 15px 0px 15px;
   text-align: left;
   font-size: 1em;
   color: var(--p-light-gray);
- }
+}
 
- #footer ul{
+#footer ul {
   display: flex;
   flex-direction: row;
   font-size: 2em;
   align-items: center;
- }
+}
 
- #footer li{
+#footer li {
   margin-left: 30px;
   margin-top: 10px;
- }
+}
 
- #footer li a{
+#footer li a {
   text-decoration: none;
   color: var(--p-light-gray);
- }
+}
 
- #footer li a:hover{
+#footer li a:hover {
   color: #a3a3a3;
   transition: 200ms;
- }
+}
 
- .logo-footer{
+.logo-footer {
   width: 150px;
   display: inline;
- }
+}
 
- .footer-content1{
+.footer-content1 {
   display: flex;
   flex-direction: row;
   justify-content: space-around;
   flex-wrap: wrap;
   align-items: center;
- }
+}
 
- /* ============ TELA DE CADASTRO =============*/
- @media (max-width: 600px) or (max-width: 800px) or (max-width: 990px){
-  .box-cadastro, .formulario, .campo-nome, .form-item, .telefones, .enderecos, .senhas {
+/* ============ TELA DE CADASTRO =============*/
+@media (max-width: 600px) or (max-width: 800px) or (max-width: 990px) {
+  .box-cadastro,
+  .formulario,
+  .campo-nome,
+  .form-item,
+  .telefones,
+  .enderecos,
+  .senhas {
     flex-direction: column !important;
     margin-left: 0px;
   }
@@ -579,16 +619,16 @@ h4 {
     border-top-right-radius: 0px !important;
     border-bottom-left-radius: 20px;
   }
- }
+}
 
- #sexo span {
+#sexo span {
   font-family: lato, sans-serif;
   color: var(--p-gray);
   font-size: 1em;
   margin: 0px 30px 0px 5px !important;
- }
+}
 
- .box-cadastro{
+.box-cadastro {
   margin: 10vh 2vh;
   border-radius: 20px;
   padding: 0px;
@@ -606,10 +646,10 @@ h4 {
 }
 
 .bg-cadastro::before {
-  content: '';
+  content: "";
   background-image: url("../assets/img-solucoes.jpg");
-  background-repeat:repeat;
-  background-size:cover;
+  background-repeat: repeat;
+  background-size: cover;
   background-position: center;
   position: absolute;
   top: 0;
@@ -619,7 +659,7 @@ h4 {
   opacity: 30%;
 }
 
- .login {
+.login {
   flex: 1;
   display: flex;
   flex-direction: column;
@@ -629,10 +669,9 @@ h4 {
   border-bottom-left-radius: 20px;
   border-top-left-radius: 20px;
   background-image: var(--gradient-blue);
- }
+}
 
-
- .cadastro {
+.cadastro {
   flex: 2;
   display: flex;
   flex-direction: column;
@@ -640,83 +679,85 @@ h4 {
   border-bottom-right-radius: 20px;
   border-top-right-radius: 20px;
   padding: 30px;
- }
+  transition: 300ms;
+}
 
- .cadastro h2{
+.cadastro h2 {
   text-align: center;
   margin: auto;
- }
+}
 
- .logo-login{
+.logo-login {
   width: 300px;
- }
+}
 
- .login h2{
+.login h2 {
   text-align: center;
   color: white;
- }
+}
 
- .acessar-conta{
+.acessar-conta {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
- }
+}
 
- .formulario {
+.formulario {
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
- }
+}
 
- .formulario label > p{
+.formulario label > p {
   padding: 0px;
- }
+}
 
- .option-radio{
+.option-radio {
   position: absolute;
   opacity: 0;
   margin-top: 2px;
   height: 19px;
   width: 19px;
- }
+}
 
- .radio-btn{
+.radio-btn {
   height: 20px;
   width: 20px;
   border-radius: 100px;
   border: 1px solid var(--red);
   display: block;
-  margin-right: .5rem;
+  margin-right: 0.5rem;
 }
 
-input[type="radio"]:checked + label span{
+input[type="radio"]:checked + label span {
   color: var(--red);
-  transition: 200ms; 
+  transition: 200ms;
 }
 
-input[type="radio"]:checked + label .radio-btn{
+input[type="radio"]:checked + label .radio-btn {
   background: radial-gradient(circle, red 45%, transparent 50%);
   transition: 200ms;
 }
 
- .label-radio{
+.label-radio {
   display: flex;
   align-items: center;
- }
+}
 
- .form-item {
+.form-item {
   width: 100%;
- }
+}
 
- input.form-item, select.form-item{
-  background-color: var(--bg-color-contrast) ;
+input.form-item,
+select.form-item {
+  background-color: var(--bg-color-contrast);
   color: #3a4f5c;
   padding: 5px;
   border-radius: 5px;
- }
+}
 
- input::placeholder {
+input::placeholder {
   color: #b7b7b7;
 }
 
@@ -724,34 +765,45 @@ input[type="radio"]:checked + label .radio-btn{
   color: #3a4f5c;
 }
 
-
- .enderecos input {
+.enderecos input {
   margin: 5px 0px;
- }
+}
 
- .telefones {
+.telefones {
   display: flex;
   flex-direction: row;
   flex-wrap: nowrap;
   gap: 15px;
- }
+}
 
- .telefones span  {
+.telefones span {
   width: 100%;
- }
+}
 
- select {
+select {
   padding: 5px;
   border-radius: 5px;
   margin-bottom: 15px;
- }
+}
 
- *:disabled {
+*:disabled {
   background-color: var(--mid-gray);
   opacity: 0.5;
- }
- 
- #messageCep, #messageNome, #messageCPF, #messageDataNascimento, #messageSexo, #messageNomeMae, #messageTelefoneFixo, #messageTelefoneCelular, #messageLogin, #messageSenha, #messageRepeteSenha, #messageSubmit {
+}
+
+#messageCep,
+#messageNome,
+#messageCPF,
+#messageDataNascimento,
+#messageSexo,
+#messageNomeMae,
+#messageTelefoneFixo,
+#messageTelefoneCelular,
+#messageLogin,
+#messageSenha,
+#messageRepeteSenha,
+#messageSubmit,
+#messageError {
   color: var(--red);
   font-size: 1rem;
   visibility: hidden;
@@ -761,9 +813,9 @@ input[type="radio"]:checked + label .radio-btn{
   margin: 5px 0px;
 }
 
- /* =============== TELA DE LOGIN =================*/
+/* =============== TELA DE LOGIN =================*/
 
- .tela-login {
+.tela-login {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -771,49 +823,57 @@ input[type="radio"]:checked + label .radio-btn{
   gap: 30px;
   padding: 100px 40px 100px 40px;
   border-radius: 20px;
-  background-image: linear-gradient(to top, #02426c, #00436f, #004d7f, #00568f, #0060a0);
- }
+  background-image: linear-gradient(
+    to top,
+    #02426c,
+    #00436f,
+    #004d7f,
+    #00568f,
+    #0060a0
+  );
+}
 
- .logo-login{
+.logo-login {
   width: 300px;
- }
+}
 
- .login h2{
+.login h2 {
   text-align: center;
   color: white;
- }
+}
 
- .formulario-login p, .tela-login h2 {
+.formulario-login p,
+.tela-login h2 {
   color: var(--p-light-gray) !important;
   margin: 5px 0px !important;
   padding: 0px;
- }
+}
 
- .tela-login p{
+.tela-login p {
   color: var(--p-light-gray) !important;
-  margin: 5px 0px ;
+  margin: 5px 0px;
   padding: 0px;
- }
+}
 
- .tela-login p > a{
+.tela-login p > a {
   color: var(--red) !important;
   margin: 5px 0px !important;
   padding: 0px;
- }
+}
 
- .formulario-login .button-white {
+.formulario-login .button-white {
   margin: 0px;
- }
+}
 
- /* =================== INTERNET DEDICADA ====================*/
- 
- .bg-internet-dedicada {
+/* =================== INTERNET DEDICADA ====================*/
+
+.bg-internet-dedicada {
   min-height: 70vh;
   position: relative;
 }
 
 .bg-internet-dedicada::before {
-  content: '';
+  content: "";
   background-image: url("../ASSETS/banner-internet-dedicada.jpg");
   background-repeat: no-repeat;
   background-size: cover;
@@ -835,16 +895,16 @@ input[type="radio"]:checked + label .radio-btn{
   padding-right: 800px;
 }
 
-.banner p{
+.banner p {
   color: var(--p-light-gray);
   margin-bottom: 30px;
 }
 
-.banner .button-secondary{
+.banner .button-secondary {
   margin-left: 0px;
 }
 
-#sobre-dedicada p{
+#sobre-dedicada p {
   margin-bottom: 20px;
   text-align: center;
 }
@@ -854,18 +914,18 @@ input[type="radio"]:checked + label .radio-btn{
   margin-bottom: 30px;
 }
 
-#sobre-dedicada h2{
+#sobre-dedicada h2 {
   color: var(--red);
   text-align: center;
   margin-top: 15px;
 }
 
-#beneficios-dedicada h2{
+#beneficios-dedicada h2 {
   color: var(--p-light-gray);
   text-align: center;
 }
 
-#beneficios-dedicada .container{
+#beneficios-dedicada .container {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -900,17 +960,30 @@ form.formulario-login button:hover {
   transition: 200ms;
 }
 
-button:hover {
-  color: var(--p-light-gray);
+button:hover, .carousel-indicators button:not() {
+  color: var(--p-light-gray) !important;
   background-color: #0060a0;
   transition: 200ms;
 }
 
-button:focus {
+
+button:focus .carousel-indicators button:not() {
   color: var(--red);
   background-color: #a3a3a3;
   transition: 200ms;
 }
 
+/* ================================= BOTÃO LOGADO ======================================= */
 
+#logged {
+  display: inline;
+}
+
+#logged:hover {
+  color: white !important;
+}
+
+#listDropdown {
+  font-size: 1rem;
+}
 

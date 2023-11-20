@@ -1,4 +1,4 @@
-const nome = document.querySelector("#nome");
+const nome = document.getElementById("nome");
 const messageNome = document.querySelector("#messageNome");
 
 const dataNascimento = document.getElementById("data");
@@ -30,6 +30,11 @@ const msgRepeteSenha = document.getElementById("messageRepeteSenha");
 
 let submit = document.getElementById("submit-form");
 const messageSubmit = document.querySelector("#messageSubmit");
+
+const logradouro = document.getElementById("logradouro")
+const numeroCasa = document.getElementById("numero-casa")
+const uf = document.getElementById("uf")
+
 
 var erroFormNome = true;
 var erroFormNascimento = true;
@@ -183,7 +188,7 @@ nomeMae.addEventListener("keyup", () => {
       throw { NomeMae_error: "Apenas letras." };
     } else if (nomeMae.value.length < 15) {
       throw { NomeMae_error: "Digite o nome materno completo." };
-    }else if (nomeMae.value.length > 15 && nome.value.length < 60) {
+    } else if (nomeMae.value.length > 15 && nome.value.length < 60) {
       document
         .getElementById("messageNomeMae")
         .setAttribute("style", "visibility: hidden");
@@ -313,14 +318,14 @@ login.addEventListener("keyup", () => {
 //================================= REQUIRE SENHA ===========================================
 
 function errorRepeteSenha() {
-document
-.getElementById("messageRepeteSenha")
-.setAttribute("style", "visibility: visible");
+  document
+    .getElementById("messageRepeteSenha")
+    .setAttribute("style", "visibility: visible");
 
-document
-.getElementById("repete-senha")
-.setAttribute("style", "border:1px solid red");
-erroRepeteSenha = true;
+  document
+    .getElementById("repete-senha")
+    .setAttribute("style", "border:1px solid red");
+  erroRepeteSenha = true;
 }
 
 function errorSenha() {
@@ -331,35 +336,33 @@ function errorSenha() {
   document
     .getElementById("senha")
     .setAttribute("style", "border:1px solid red");
-
 }
 
 senha.addEventListener("keyup", () => {
   const validaSenha = /^[\w]{8}$/;
   try {
     if (!validaSenha.test(senha.value)) {
-      console.log("caiu aqui")
-      throw {senha_error: "Exatamente 8 caracteres." };
-    } else if (repeteSenha.value.length != 0 && senha.value != repeteSenha.value){
-      throw { repeteSenha_error: "As senhas não conferem."};
-    } else {      
-      console.log("caiu aqui3")
+      throw { senha_error: "Exatamente 8 caracteres." };
+    } else if (
+      repeteSenha.value.length != 0 &&
+      senha.value != repeteSenha.value
+    ) {
+      throw { repeteSenha_error: "As senhas não conferem." };
+    } else {
       document
         .getElementById("messageSenha")
         .setAttribute("style", "visibility: hidden");
-      document
-        .getElementById("senha")
-        .setAttribute("style", "border:none");
+      document.getElementById("senha").setAttribute("style", "border:none");
       erroSenha = false;
       document
-      .getElementById("repete-senha")
-      .setAttribute("style", "border:none");
+        .getElementById("repete-senha")
+        .setAttribute("style", "border:none");
     }
   } catch (error) {
     if (error?.senha_error) {
       errorSenha();
       msgSenha.textContent = error.senha_error;
-    }else if (error?.repeteSenha_error) {
+    } else if (error?.repeteSenha_error) {
       errorRepeteSenha();
       msgRepeteSenha.textContent = error.repeteSenha_error;
     }
@@ -391,17 +394,6 @@ repeteSenha.addEventListener("keyup", () => {
 //================================= REQUIRE BOTÃO ===========================================
 
 submit.addEventListener("click", function (event) {
-    console.log(erroFormNome)
-    console.log(erroFormNascimento)
-    console.log(erroSexo)
-    console.log(erroNomeMae)
-    console.log(erroTelFixo)
-    console.log(erroTelCel)
-    console.log(erroLogin)
-    console.log(erroSenha)
-    console.log(erroRepeteSenha)
-    
-
   if (
     erroFormNome == true ||
     erroFormNascimento == true ||
@@ -420,7 +412,6 @@ submit.addEventListener("click", function (event) {
     document.getElementById("messageSubmit").innerHTML =
       "Preencha todos os campos corretamente";
     event.preventDefault();
-    
   } else if (
     erroFormNome == false &&
     erroFormNascimento == false &&
@@ -433,9 +424,32 @@ submit.addEventListener("click", function (event) {
     erroSenha == false &&
     erroRepeteSenha == false
   ) {
-    
     document
       .getElementById("messageSubmit")
       .setAttribute("style", "visibility: hidden");
+
+    // ================= LOCAL STORAGE ====================
+    var dadosForm = {}
+      dadosForm.nome = nome.value
+      dadosForm.dataNasc = dataNascimento.value
+      dadosForm.cpf = cpf.value
+      dadosForm.sexo = document.querySelector('input[name=sexo]:checked').value
+      dadosForm.nomeMae = nomeMae.value
+      dadosForm.telFixo = telFixo.value
+      dadosForm.telCel = telCel.value
+      dadosForm.login = login.value
+      dadosForm.senha = senha.value
+
+      dadosForm.cep = cep.value
+      dadosForm.logradouro = logradouro.value
+      dadosForm.numeroCasa = numeroCasa.value
+      dadosForm.bairro = bairro.value
+      dadosForm.localidade = localidade.value
+      dadosForm.uf = uf.value
+
+      localStorage.setItem('dadosForm', JSON.stringify(dadosForm));
+      window.location.href = 'login.html';
   }
 });
+
+//localStorage.clear()

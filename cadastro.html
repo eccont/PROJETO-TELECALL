@@ -44,7 +44,7 @@
 
     <title>Telecall | Soluções em tecnologia</title>
   </head>
-  <body class="">
+  <body>
         <!-- ============= FIXED MENU ================= -->
         <div class=" fixed">
           <details> 
@@ -91,7 +91,7 @@
               <div class="mb-4">
                 <h2>CADASTRE-SE</h2>
               </div>
-              <form class="formulario" action="/index.html">
+              <form class="formulario" action="/login.html">
                 <div class="campo-nome d-flex label-form">
                   <div class="form-item ">
                     <p>Nome*</p>
@@ -233,6 +233,7 @@
                     type="text"
                     placeholder="CEP"
                     alt="Digite seu cep"
+                    onkeyup="handleCep(event)"
                     required
                   />
                   <div class="d-flex">
@@ -248,6 +249,7 @@
                     </div>
                     <div class="ms-3 form-item">
                       <input
+                      id="numero-casa"
                         class="form-item"
                         type="text"
                         placeholder="Número"
@@ -336,7 +338,7 @@
                       <input
                         id="senha"
                         class="form-item"
-                        type="text"
+                        type="password"
                         placeholder="Sua senha"
                         required
                       />
@@ -350,7 +352,7 @@
                       <input
                         id="repete-senha"
                         class="form-item"
-                        type="text"
+                        type="password"
                         placeholder="Sua senha"
                         required
                       />
@@ -411,7 +413,6 @@
       </div>
     </footer>
     <!-- ============= FIM DO FOOTER ============ -->
-    <!--<script src="JS/valida-nome.js"></script>-->
     <script src="JS/valida-cep.js"></script>
     <script src="JS/require-form.js"></script>
     <script src="JS/dark_mode.js"></script>

@@ -1,9 +1,29 @@
-let element = document.getElementById("chk");
 const chk = document.getElementById("chk");
 
-  chk.addEventListener("click", () => {
-    console.log("hello")
-    document.body.classList.toggle("dark-mode");
-    document.body.classList.toggle("form-item");
+function toggleDarkMode(){
+  document.body.classList.toggle("dark-mode")
+}
+
+// load dark mode
+function loadTheme(){
+  const darkMode = localStorage.getItem('dark')
+
+  if (darkMode) {
+    toggleDarkMode()
+  }
+}
+
+loadTheme()
+
+  chk.addEventListener("change", () => {
+    toggleDarkMode()
+
+// salvando dark mode
+    localStorage.removeItem("dark")
+    if (document.body.classList.contains("dark-mode")) {
+      localStorage.setItem('dark', 1)
+    }
+
   });
   
+

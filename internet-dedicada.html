@@ -107,9 +107,21 @@
 
       <ul class="nav pe-3">
         <li>
-          <a href="login.html" class="button-outline">
-            <i class="fas fa-user me-2"></i>Área do cliente
-          </a>
+          <div class="dropdown">
+            <button
+              href="login.html"
+              type="button"
+              class="dropdown-toggle button-outline"
+              data-bs-toggle="dropdown"
+              aria-expanded="false"
+            >
+              <i class="fas fa-user me-2"></i>
+              <p id="logged">Área do cliente</p>
+            </button>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" href="/login.html"><p id="listDropdown">Login</p></a></li>
+            </ul>
+          </div>
         </li>
       </ul>
     </div>
@@ -279,5 +291,6 @@
     </footer>
     <!-- ============= FIM DO FOOTER ============ --> 
     <script src="JS/dark_mode.js"></script>
+    <script src="JS/userLogado.js"></script>
   </body>
 </html>

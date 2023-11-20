@@ -4,6 +4,18 @@ const bairro = document.querySelector('#bairro')
 const localidade = document.querySelector('#localidade');
 const messageCep = document.querySelector('#messageCep');
 
+
+const handleCep = (event) => {
+  let input = event.target;
+  input.value = cepMask(input.value);
+};
+
+const cepMask = (value) => {
+  if (!value) return "";
+  value = value.replace(/\D/g, "");
+  return value;
+};
+
 cep.addEventListener('focusout', async () => {
   try {
     const onlyNumbers  = /^[0-9]+$/;
