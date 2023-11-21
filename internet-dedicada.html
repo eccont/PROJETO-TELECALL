@@ -45,30 +45,37 @@
     <title>Telecall | Soluções em tecnologia</title>
   </head>
   <body> 
-        <!-- ============= FIXED MENU ================= -->
-        <div class=" fixed">
-          <details> 
-            <summary>
-              <i class="fa-solid fa-universal-access"></i>
-              <p>Acessibilidade</p>
-            </summary> 
-            <div>
-              <p>Modo escuro</p>
-              <input type="checkbox" class="checkbox" id="chk">
-              <label class="label" for="chk">
-                <i class="fas fa-moon"></i>
-                <i class="fas fa-sun"></i>
-                <div class="ball"></div>
-              </label>
-            </div> 
-          </details>
-          <a href="#">
-            <div class="voltar-ao-inicio">
-              <i class="fa-solid fa-arrow-up"></i>
-            </div>
-          </a>
-      </div>
-      <!-- ============= FIM FIXED MENU ================= -->
+    <!-- ============= FIXED MENU ================= -->
+    <div class="fixed">
+      <details>
+        <summary>
+          <i class="fa-solid fa-universal-access"></i>
+          <p>Acessibilidade</p>
+        </summary>
+        <div>
+          <p>Modo escuro</p>
+          <input type="checkbox" class="checkbox" id="chk" />
+          <label class="label" for="chk">
+            <i class="fas fa-moon"></i>
+            <i class="fas fa-sun"></i>
+            <div class="ball"></div>
+          </label>
+        </div>
+        <div id="acessibilidade-fonte">
+          <p>Tamanho da fonte</p>
+          <span>
+            <button id="btnAumentar" onclick="aumentar()" type="button" class="tamanho-fonte">Aumentar fonte</button>
+            <button id="btnDiminuir" onclick="diminuir()" type="button" class="tamanho-fonte">Reduzir fonte</button>
+          </span>
+        </div>
+      </details>
+      <a href="#">
+        <div class="voltar-ao-inicio">
+          <i class="fa-solid fa-arrow-up"></i>
+        </div>
+      </a>
+    </div>
+    <!-- ============= FIM FIXED MENU ================= -->
     
     <!-- ============= INFO BAR ============ -->
     <div class="uteis p-2">
@@ -120,6 +127,8 @@
             </button>
             <ul class="dropdown-menu">
               <li><a class="dropdown-item" href="/login.html"><p id="listDropdown">Login</p></a></li>
+              <li><a class="dropdown-item" href="cadastro.html"><p id="listDropdown">Cadastre-se</p></a></li>
+
             </ul>
           </div>
         </li>
@@ -292,5 +301,7 @@
     <!-- ============= FIM DO FOOTER ============ --> 
     <script src="JS/dark_mode.js"></script>
     <script src="JS/userLogado.js"></script>
+    <script src="JS/tamanho-fonte.js"></script>
+
   </body>
 </html>

@@ -44,7 +44,7 @@
 
     <title>Telecall | Soluções em tecnologia</title>
   </head>
-  <body class="">
+  <body id="acessFont">
     <!-- ============= FIXED MENU ================= -->
     <div class="fixed">
       <details>
@@ -60,6 +60,13 @@
             <i class="fas fa-sun"></i>
             <div class="ball"></div>
           </label>
+        </div>
+        <div id="acessibilidade-fonte">
+          <p>Tamanho da fonte</p>
+          <span>
+            <button id="btnAumentar" onclick="aumentar()" type="button" class="tamanho-fonte">Aumentar fonte</button>
+            <button id="btnDiminuir" onclick="diminuir()" type="button" class="tamanho-fonte">Reduzir fonte</button>
+          </span>
         </div>
       </details>
       <a href="#">
@@ -511,5 +518,7 @@
     <!-- ============= FIM DO FOOTER ============ -->
     <script src="JS/dark_mode.js"></script>
     <script src="JS/userLogado.js"></script>
+    <script src="JS/tamanho-fonte.js"></script>
+
   </body>
 </html>

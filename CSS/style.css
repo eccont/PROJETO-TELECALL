@@ -52,6 +52,10 @@
   --gradient-blue: linear-gradient(0deg, #021521, #063555 100%);
 }
 
+.navbar-toggler {
+  background-color: var(--p-light-gray);
+}
+
 .dark-mode .dropdown button:hover {
   background-color: #02426c;
 }
@@ -104,6 +108,7 @@
   #planos .button-secondary {
     margin: 20px auto;
   }
+  
   #beneficios .row {
     align-items: center;
     justify-content: center;
@@ -153,6 +158,8 @@ p {
   align-items: center;
 }
 
+
+
 details {
   opacity: 70%;
   display: flex;
@@ -186,8 +193,32 @@ details summary {
   align-items: center;
 }
 
+
+#acessibilidade-fonte {
+  margin: 10px 0px 15px 0px;
+}
+
+
+.tamanho-fonte {
+  background-color: var(--p-light-gray);
+  padding: 10px;
+  margin: 0px 5px;
+  font-size: 1em;
+  text-decoration: none;
+  color: #2a2a2a;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.tamanho-fonte:hover {
+  background-color: #2a2a2a;
+  color: white;
+  transition: 200ms;
+}
+
 details p,
-details i {
+details i,
+details a {
   color: var(--p-light-gray);
   margin: 5px;
 }
@@ -901,11 +932,10 @@ select {
 
 .banner h1 {
   font-weight: 900;
-  font-size: 80px;
+  font-size: 4rem;
   color: white;
   position: relative;
   margin-top: 200px;
-  padding-right: 800px;
 }
 
 .banner p {
