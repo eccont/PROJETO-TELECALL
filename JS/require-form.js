@@ -31,10 +31,9 @@ const msgRepeteSenha = document.getElementById("messageRepeteSenha");
 let submit = document.getElementById("submit-form");
 const messageSubmit = document.querySelector("#messageSubmit");
 
-const logradouro = document.getElementById("logradouro")
-const numeroCasa = document.getElementById("numero-casa")
-const uf = document.getElementById("uf")
-
+const logradouro = document.getElementById("logradouro");
+const numeroCasa = document.getElementById("numero-casa");
+const uf = document.getElementById("uf");
 
 var erroFormNome = true;
 var erroFormNascimento = true;
@@ -429,26 +428,26 @@ submit.addEventListener("click", function (event) {
       .setAttribute("style", "visibility: hidden");
 
     // ================= LOCAL STORAGE ====================
-    var dadosForm = {}
-      dadosForm.nome = nome.value
-      dadosForm.dataNasc = dataNascimento.value
-      dadosForm.cpf = cpf.value
-      dadosForm.sexo = document.querySelector('input[name=sexo]:checked').value
-      dadosForm.nomeMae = nomeMae.value
-      dadosForm.telFixo = telFixo.value
-      dadosForm.telCel = telCel.value
-      dadosForm.login = login.value
-      dadosForm.senha = senha.value
+    var dadosForm = {};
+    dadosForm.nome = nome.value;
+    dadosForm.dataNasc = dataNascimento.value;
+    dadosForm.cpf = cpf.value;
+    dadosForm.sexo = document.querySelector("input[name=sexo]:checked").value;
+    dadosForm.nomeMae = nomeMae.value;
+    dadosForm.telFixo = telFixo.value;
+    dadosForm.telCel = telCel.value;
+    dadosForm.login = login.value;
+    dadosForm.senha = senha.value;
 
-      dadosForm.cep = cep.value
-      dadosForm.logradouro = logradouro.value
-      dadosForm.numeroCasa = numeroCasa.value
-      dadosForm.bairro = bairro.value
-      dadosForm.localidade = localidade.value
-      dadosForm.uf = uf.value
+    dadosForm.cep = cep.value;
+    dadosForm.logradouro = logradouro.value;
+    dadosForm.numeroCasa = numeroCasa.value;
+    dadosForm.bairro = bairro.value;
+    dadosForm.localidade = localidade.value;
+    dadosForm.uf = uf.value;
 
-      localStorage.setItem('dadosForm', JSON.stringify(dadosForm));
-      window.location.href = 'login.html';
+    localStorage.setItem("dadosForm", JSON.stringify(dadosForm));
+    window.location.href = "login.html";
   }
 });
 

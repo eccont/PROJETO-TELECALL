@@ -1,9 +1,9 @@
 tamanho = 16;
-function diminuir(){
+function diminuir() {
   tamanho--;
-  document.body.style.fontSize=tamanho+"px";
+  document.body.style.fontSize = tamanho + "px";
 }
-function aumentar(){
+function aumentar() {
   tamanho++;
-  document.body.style.fontSize=tamanho+"px";
+  document.body.style.fontSize = tamanho + "px";
 }

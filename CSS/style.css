@@ -60,7 +60,7 @@
   background-color: #02426c;
 }
 
-.dark-mode #listDropdown {
+.dark-mode .listDropdown {
   color: #2a2a2a;
 }
 
@@ -108,7 +108,7 @@
   #planos .button-secondary {
     margin: 20px auto;
   }
-  
+
   #beneficios .row {
     align-items: center;
     justify-content: center;
@@ -126,7 +126,7 @@
   .formulario .d-flex {
     flex-direction: column;
     align-items: flex-start;
-  }  
+  }
 
   .dropdown {
     margin: 5px 15px;
@@ -158,8 +158,6 @@ p {
   align-items: center;
 }
 
-
-
 details {
   opacity: 70%;
   display: flex;
@@ -168,6 +166,7 @@ details {
   padding: 10px;
   border-radius: 10px;
   color: var(--p-light-gray);
+  transition: 800ms;
 
   transform: scale(0.8);
 }
@@ -177,8 +176,12 @@ details:hover {
   transition: 500ms;
 }
 
+details[open] {
+  opacity: 100%;
+}
+
 summary::-webkit-details-marker {
-  display: none
+  display: none;
 }
 
 summary {
@@ -193,11 +196,9 @@ details summary {
   align-items: center;
 }
 
-
 #acessibilidade-fonte {
   margin: 10px 0px 15px 0px;
 }
-
 
 .tamanho-fonte {
   background-color: var(--p-light-gray);
@@ -322,7 +323,6 @@ header .nav-link:hover {
   color: var(--p-light-gray);
 }
 
-
 .active {
   color: var(--light-red) !important;
 }
@@ -348,7 +348,7 @@ header .nav-link:hover {
 }
 
 .bg-servicos::before {
-  content: '';
+  content: "";
   background-image: url("../ASSETS/img-solucoes.jpg");
   background-repeat: no-repeat;
   background-size: cover;
@@ -690,10 +690,10 @@ h4 {
 }
 
 .bg-cadastro::before {
-  content: '';
+  content: "";
   background-image: url("../ASSETS/img-solucoes.jpg");
-  background-repeat:repeat;
-  background-size:cover;
+  background-repeat: repeat;
+  background-size: cover;
   background-position: center;
   position: absolute;
   top: 0;
@@ -1003,14 +1003,15 @@ form.formulario-login button:hover {
   transition: 200ms;
 }
 
-button:hover, .carousel-indicators button:not() {
+button:hover,
+.carousel-indicators button:not() {
   color: var(--p-light-gray) !important;
   background-color: #0060a0;
   transition: 200ms;
 }
 
-
-button:focus .carousel-indicators button:not() {
+button:focus,
+.carousel-indicators button:not() {
   color: var(--red);
   background-color: #a3a3a3;
   transition: 200ms;
@@ -1026,6 +1027,6 @@ button:focus .carousel-indicators button:not() {
   color: white !important;
 }
 
-#listDropdown {
+.listDropdown {
   font-size: 1rem;
 }

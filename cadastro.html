@@ -45,37 +45,51 @@
     <title>Telecall | Soluções em tecnologia</title>
   </head>
   <body>
-        <!-- ============= FIXED MENU ================= -->
-        <div class=" fixed">
-          <details> 
-            <summary>
-              <i class="fa-solid fa-universal-access"></i>
-              <p>Acessibilidade</p>
-            </summary> 
-            <div>
-              <p>Modo escuro</p>
-              <input type="checkbox" class="checkbox" id="chk">
-              <label class="label" for="chk">
-                <i class="fas fa-moon"></i>
-                <i class="fas fa-sun"></i>
-                <div class="ball"></div>
-              </label>
-            </div> 
-            <div id="acessibilidade-fonte">
-              <p>Tamanho da fonte</p>
-              <span>
-                <button id="btnAumentar" onclick="aumentar()" type="button" class="tamanho-fonte">Aumentar fonte</button>
-                <button id="btnDiminuir" onclick="diminuir()" type="button" class="tamanho-fonte">Reduzir fonte</button>
-              </span>
-            </div>
-          </details>
-          <a href="#">
-            <div class="voltar-ao-inicio">
-              <i class="fa-solid fa-arrow-up"></i>
-            </div>
-          </a>
-      </div>
-      <!-- ============= FIM FIXED MENU ================= -->
+    <!-- ============= FIXED MENU ================= -->
+    <div class="fixed">
+      <details>
+        <summary>
+          <i class="fa-solid fa-universal-access"></i>
+          <p>Acessibilidade</p>
+        </summary>
+        <div>
+          <p>Modo escuro</p>
+          <input type="checkbox" class="checkbox" id="chk" />
+          <label class="label" for="chk">
+            <i class="fas fa-moon"></i>
+            <i class="fas fa-sun"></i>
+            <div class="ball"></div>
+          </label>
+        </div>
+        <div id="acessibilidade-fonte">
+          <p>Tamanho da fonte</p>
+          <span>
+            <button
+              id="btnAumentar"
+              onclick="aumentar()"
+              type="button"
+              class="tamanho-fonte"
+            >
+              Aumentar fonte
+            </button>
+            <button
+              id="btnDiminuir"
+              onclick="diminuir()"
+              type="button"
+              class="tamanho-fonte"
+            >
+              Reduzir fonte
+            </button>
+          </span>
+        </div>
+      </details>
+      <a href="#">
+        <div class="voltar-ao-inicio">
+          <i class="fa-solid fa-arrow-up"></i>
+        </div>
+      </a>
+    </div>
+    <!-- ============= FIM FIXED MENU ================= -->
     <div class="bg-cadastro">
       <div class="container">
         <div class="box-cadastro">
@@ -100,7 +114,7 @@
               </div>
               <form class="formulario" action="/login.html">
                 <div class="campo-nome d-flex label-form">
-                  <div class="form-item ">
+                  <div class="form-item">
                     <p>Nome*</p>
 
                     <label for="nome" class="form-item">
@@ -256,7 +270,7 @@
                     </div>
                     <div class="form-item">
                       <input
-                      id="numero-casa"
+                        id="numero-casa"
                         class="form-item"
                         type="text"
                         placeholder="Número"
@@ -292,34 +306,34 @@
                     alt="Digite seu Estado"
                     required
                   >
-                  <option value="AC">Acre</option>
-                  <option value="AL">Alagoas</option>
-                  <option value="AP">Amapá</option>
-                  <option value="AM">Amazonas</option>
-                  <option value="BA">Bahia</option>
-                  <option value="CE">Ceará</option>
-                  <option value="DF">Distrito Federal</option>
-                  <option value="ES">Espírito Santo</option>
-                  <option value="GO">Goiás</option>
-                  <option value="MA">Maranhão</option>
-                  <option value="MT">Mato Grosso</option>
-                  <option value="MS">Mato Grosso do Sul</option>
-                  <option value="MG">Minas Gerais</option>
-                  <option value="PA">Pará</option>
-                  <option value="PB">Paraíba</option>
-                  <option value="PR">Paraná</option>
-                  <option value="PE">Pernambuco</option>
-                  <option value="PI">Piauí</option>
-                  <option value="RJ">Rio de Janeiro</option>
-                  <option value="RN">Rio Grande do Norte</option>
-                  <option value="RS">Rio Grande do Sul</option>
-                  <option value="RO">Rondônia</option>
-                  <option value="RR">Roraima</option>
-                  <option value="SC">Santa Catarina</option>
-                  <option value="SP">São Paulo</option>
-                  <option value="SE">Sergipe</option>
-                  <option value="TO">Tocantins</option>
-                  <option value="EX">Estrangeiro</option>
+                    <option value="AC">Acre</option>
+                    <option value="AL">Alagoas</option>
+                    <option value="AP">Amapá</option>
+                    <option value="AM">Amazonas</option>
+                    <option value="BA">Bahia</option>
+                    <option value="CE">Ceará</option>
+                    <option value="DF">Distrito Federal</option>
+                    <option value="ES">Espírito Santo</option>
+                    <option value="GO">Goiás</option>
+                    <option value="MA">Maranhão</option>
+                    <option value="MT">Mato Grosso</option>
+                    <option value="MS">Mato Grosso do Sul</option>
+                    <option value="MG">Minas Gerais</option>
+                    <option value="PA">Pará</option>
+                    <option value="PB">Paraíba</option>
+                    <option value="PR">Paraná</option>
+                    <option value="PE">Pernambuco</option>
+                    <option value="PI">Piauí</option>
+                    <option value="RJ">Rio de Janeiro</option>
+                    <option value="RN">Rio Grande do Norte</option>
+                    <option value="RS">Rio Grande do Sul</option>
+                    <option value="RO">Rondônia</option>
+                    <option value="RR">Roraima</option>
+                    <option value="SC">Santa Catarina</option>
+                    <option value="SP">São Paulo</option>
+                    <option value="SE">Sergipe</option>
+                    <option value="TO">Tocantins</option>
+                    <option value="EX">Estrangeiro</option>
                   </select>
                   <span id="messageCep">$nbsp</span>
                 </div>
@@ -369,7 +383,9 @@
                 </div>
 
                 <div class="label-form">
-                  <button id="submit-form" type="submit">Finalizar cadastro</button>
+                  <button id="submit-form" type="submit">
+                    Finalizar cadastro
+                  </button>
                   <p id="messageSubmit">&nbsp</p>
                 </div>
               </form>
@@ -424,6 +440,5 @@
     <script src="JS/require-form.js"></script>
     <script src="JS/dark_mode.js"></script>
     <script src="JS/tamanho-fonte.js"></script>
-
   </body>
 </html>

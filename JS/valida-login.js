@@ -3,12 +3,10 @@ const dadosForm = JSON.parse(localStorage.getItem("dadosForm"));
 const inputLogin = document.getElementById("login");
 const inputSenha = document.getElementById("senha");
 
-console.log(dadosForm)
-
+console.log(dadosForm);
 
 let submit = document.getElementById("submit-form");
 const msgError = document.getElementById("messageError");
-
 
 function validaError() {
   document
@@ -34,7 +32,7 @@ submit.addEventListener("click", (event) => {
         throw { erro_error: "Usuário não cadastrado." };
       }
     } else {
-      throw { erro_error: "Usuário não cadastrado." };      
+      throw { erro_error: "Usuário não cadastrado." };
     }
   } catch (error) {
     if (error?.erro_error) {
@@ -42,10 +40,7 @@ submit.addEventListener("click", (event) => {
       messageError.textContent = error.erro_error;
     }
   }
-event.preventDefault();
+  event.preventDefault();
 });
 
-sessionStorage.clear()
-
-
-
+sessionStorage.clear();
