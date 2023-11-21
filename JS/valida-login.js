@@ -15,8 +15,7 @@ function validaError() {
 }
 
 submit.addEventListener("click", (event) => {
-  console.log(login + 1);
-  console.log(inputLogin.value);
+
   try {
     if (dadosForm) {
       const login = dadosForm["login"];
@@ -24,7 +23,7 @@ submit.addEventListener("click", (event) => {
       if (inputLogin.value === login) {
         if (inputSenha.value === senha) {
           sessionStorage.setItem("logado", true);
-          window.location.href = "/index.html";
+          window.location.href = "index.html";
         } else {
           throw { erro_error: "Senha inválida." };
         }

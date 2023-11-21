@@ -6,7 +6,7 @@ const dados = JSON.parse(localStorage.getItem("dadosForm"));
 console.log(userLogado);
 
 if (userLogado === true) {
-  logged.innerHTML = "Boas vindas, " + dados["nome"];
-
+  campoLogado.innerHTML = "Boas vindas, " + dados["nome"];
   listDropdown.innerHTML = "Sair";
+  
 }

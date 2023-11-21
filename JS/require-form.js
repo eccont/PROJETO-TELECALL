@@ -6,6 +6,8 @@ const dataNascimento = document.getElementById("data");
 const cpf = document.getElementById("cpf");
 const msgCPF = document.querySelector("#messageCPF");
 
+
+const sexoChecked = document.querySelector("input[name=sexo]:checked");
 const sexoMasc = document.getElementById("masculino");
 const sexoFem = document.getElementById("feminino");
 const sexoND = document.getElementById("nao-diz");
@@ -432,7 +434,7 @@ submit.addEventListener("click", function (event) {
     dadosForm.nome = nome.value;
     dadosForm.dataNasc = dataNascimento.value;
     dadosForm.cpf = cpf.value;
-    dadosForm.sexo = document.querySelector("input[name=sexo]:checked").value;
+    dadosForm.sexo = sexoChecked.value
     dadosForm.nomeMae = nomeMae.value;
     dadosForm.telFixo = telFixo.value;
     dadosForm.telCel = telCel.value;
