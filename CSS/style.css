@@ -60,8 +60,8 @@
   background-color: #02426c;
 }
 
-.dark-mode .listDropdown {
-  color: #2a2a2a;
+.dark-mode #listDropdown {
+  color: #2a2a2a !important;
 }
 
 .dark-mode h4 {

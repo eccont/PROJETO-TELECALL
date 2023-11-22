@@ -394,6 +394,16 @@ repeteSenha.addEventListener("keyup", () => {
 //================================= REQUIRE BOTÃO ===========================================
 
 submit.addEventListener("click", function (event) {
+  console.log(erroFormNome)
+  console.log(erroFormNascimento)
+  console.log(erroCPF)
+  console.log(erroSexo)
+  console.log(erroNomeMae)
+  console.log(erroTelFixo)
+  console.log(erroTelCel)
+  console.log(erroLogin)
+  console.log(erroSenha)
+  console.log(erroRepeteSenha)
   if (
     erroFormNome == true ||
     erroFormNascimento == true ||
