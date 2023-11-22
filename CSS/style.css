@@ -861,21 +861,14 @@ select {
 #eye1, #eye2 {
   content: "";
   position: absolute;
-  right: 20px;
+  right: 15px;
   top: 18px;
-  transform: translateY(-50%) ;
-  background: url(../ASSETS/olho2.svg);
-  background-size: cover;
-  width: 20px;
-  height: 20px;
+  transform: translateY(-60%) ;
+  color: var(--p-gray);
+  width: 15px;
   cursor: pointer;
-  color: var(--dark-red);
 }
 
-#eye1.hide, #eye2.hide {
-  background: url(../ASSETS/olho1.svg);
-  background-size: cover;
-}
 
 /* =============== TELA DE LOGIN =================*/
 
