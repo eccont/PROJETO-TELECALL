@@ -458,7 +458,7 @@ submit.addEventListener("click", function (event) {
     dadosForm.uf = uf.value;
 
     localStorage.setItem("dadosForm", JSON.stringify(dadosForm));
-    window.location.href = "login.html";
+    //window.location.href = "login.html";
   }
 });
 
