@@ -791,6 +791,7 @@ input[type="radio"]:checked + label .radio-btn {
 
 .form-item {
   width: 100%;
+  position: relative;
 }
 
 input.form-item,
@@ -855,6 +856,25 @@ select {
 
 .label-form {
   margin: 5px 0px;
+}
+
+#eye1, #eye2 {
+  content: "";
+  position: absolute;
+  right: 20px;
+  top: 18px;
+  transform: translateY(-50%) ;
+  background: url(../ASSETS/olho2.svg);
+  background-size: cover;
+  width: 20px;
+  height: 20px;
+  cursor: pointer;
+  color: var(--dark-red);
+}
+
+#eye1.hide, #eye2.hide {
+  background: url(../ASSETS/olho1.svg);
+  background-size: cover;
 }
 
 /* =============== TELA DE LOGIN =================*/

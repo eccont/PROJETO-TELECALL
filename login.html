@@ -73,14 +73,15 @@
                 </div>
                 <div>
                   <p>Senha</p>
-                  <label for="senha">
+                  <label for="senha" class="form-item">
                     <input
                       id="senha"
-                      class="form-item"
+                      class="form-item olhoSenha"
                       type="password"
                       placeholder="Sua senha"
                       size="45"
                     />
+                    <div id="eye1" onclick="showHide1()"></div>
                   </label>
                 </div>
                 <div>
@@ -141,5 +142,6 @@
     </footer>
     <!-- ============= FIM DO FOOTER ============ -->
     <script src="./JS/valida-login.js"></script>
+    <script src="JS/visualizar-senha.js"></script>
   </body>
 </html>

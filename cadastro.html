@@ -357,13 +357,13 @@
                     <p>Senha*</p>
                     <label class="senha form-item" for="senha">
                       <input
-                        id="senha"
-                        class="form-item"
+                         id="senha"
+                        class="form-item olhoSenha"
                         type="password"
                         placeholder="Sua senha"
                         required
                       />
-                      <p id="messageSenha">&nbsp</p>
+                      <div id="eye1" onclick="showHide1()"></div>
                     </label>
                   </div>
 
@@ -371,12 +371,14 @@
                     <p>Repita a Senha*</p>
                     <label for="repete-senha" class="senha form-item">
                       <input
+                        name="password"
                         id="repete-senha"
-                        class="form-item"
+                        class="form-item olhoSenha"
                         type="password"
                         placeholder="Sua senha"
                         required
                       />
+                      <div id="eye2" onclick="showHide2()"></div>
                       <p id="messageRepeteSenha">&nbsp</p>
                     </label>
                   </div>
@@ -440,5 +442,6 @@
     <script src="JS/require-form.js"></script>
     <script src="JS/dark_mode.js"></script>
     <script src="JS/tamanho-fonte.js"></script>
+    <script src="JS/visualizar-senha.js"></script>
   </body>
 </html>
